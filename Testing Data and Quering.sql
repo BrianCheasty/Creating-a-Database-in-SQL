@@ -1,4 +1,4 @@
-/*Test Data required before any queries can be executed*/
+/*Test Data required before any queries can be executed, Data is all fictional*/
 
 /*All available appointment times added. first appointment is 00 to use as a place holder in the patient chart*/
 insert into doctor_schedule values(null,'0000-00-00 00:00');
@@ -128,7 +128,7 @@ and appointment.appointment_id =1000),
 Bill_Date=curdate()
 Where bill.appointment_id = 1000;
 /*#################################################Patient 2*#################################################################*/
-insert into patient values (null,"Brian Cheasty","4 Waterford","0851234567",'1980-05-28','1990-01-01',"Male","Yes"); 
+insert into patient values (null,"Brian Cheasty","4 Waterford","0851234567",'1980-07-20','1990-01-01',"Male","Yes"); 
 insert into appointment values (null,(select patient_id from patient where patient_name = "Brian Cheasty"
 ),null,500);
 insert into treatment_booked values((select treatment_id from treatments where Treatment_name = "No Booking Yet"),
